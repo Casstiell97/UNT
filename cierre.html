@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Cierre</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const clickMessage = document.getElementById('click-message');
+    
+    // Ocultar el mensaje después de 3 segundos
+    setTimeout(function() {
+        clickMessage.classList.add('hidden');
+    }, 3000);
+
+    // Redirigir al inicio al hacer clic en cualquier parte del cuerpo
+    document.body.addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+});
+    </script>
+</head>
+<body>
+    <div class="cierre-background">
+        <img id="cierre-image" src="img/cierre.png" alt="Imagen de Cierre">
+         <div id="click-message" class="click-message">Haz click para ir al inicio</div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Simulación Electoral</p>
+    </div>
+</body>
+</html>
