@@ -93,7 +93,7 @@
 /* Media queries para dispositivos móviles */
 @media (max-width: 768px) {
     .floating-window {
-        width: 90%;
+        width: 85%;
     }
 }
 
