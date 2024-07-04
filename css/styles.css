@@ -163,8 +163,6 @@
     margin-top: auto; /* Mueve el contenedor de botones hacia la parte inferior */
 }
 
-
-
 .identity-img,
 
 .ballot-img {
@@ -205,7 +203,7 @@ button:hover {
     justify-content: center;
     gap: 8px;
     width: 100vw;
-    height: 90vh; /* Ocupa el 80% del alto de la pantalla */
+    height: 97vh; /* Ocupa el 80% del alto de la pantalla */
     /*overflow: hidden;*/
     box-sizing: border-box;
 }
