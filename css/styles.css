@@ -203,9 +203,9 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 9px;
+    gap: 7px;
     width: 100vw;
-    height: 97vh; /* Ocupa el 80% del alto de la pantalla */
+    height: 90vh; /* Ocupa el 80% del alto de la pantalla */
     /*overflow: hidden;*/
     box-sizing: border-box;
 }
@@ -242,7 +242,7 @@ button:hover {
 }
 
 .candidate-img {
-    flex: 0 0 calc(15% - 10px); /* Permitir que las imÃ¡genes se ajusten para llenar cada fila */
+    flex: 0 0 calc(15% - 12px); /* Permitir que las imÃ¡genes se ajusten para llenar cada fila */
     height: calc((90% / 4) - 0px); /* Ajustar altura para que haya 4 filas */
     cursor: pointer;
     transition: transform 0.2s;
