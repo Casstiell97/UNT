@@ -256,8 +256,8 @@ button:hover {
 }
 
 .candidate-img img {
-    width: 75%;
-    height: auto;
+    width: 85%;
+    height: 85%;
     object-fit: contain; /* Asegura que la imagen completa sea visible */
 }
 
