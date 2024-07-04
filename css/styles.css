@@ -204,8 +204,8 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 8.5px;
-    width: 90vw;
-    height: 97vh; /* Ocupa el 80% del alto de la pantalla */
+    width: 100vw;
+    height: 87vh; /* Ocupa el 80% del alto de la pantalla */
     /*overflow: hidden;*/
     box-sizing: border-box;
 }
@@ -213,31 +213,31 @@ button:hover {
 /* Media Queries para pantallas más pequeñas */
 @media (max-width: 1200px) {
     .candidates {
-        flex: 0 1 calc(25% - 10px); /* Ajusta el ancho según tus necesidades */
+        flex: 0 1 calc(15% - 10px); /* Ajusta el ancho según tus necesidades */
     }
 }
 
 @media (max-width: 992px) {
     .candidates {
-        flex: 0 1 calc(33.33% - 10px); /* Ajusta el ancho según tus necesidades */
+        flex: 0 1 calc(23.33% - 10px); /* Ajusta el ancho según tus necesidades */
     }
 }
 
 @media (max-width: 768px) {
     .candidates {
-        flex: 0 1 calc(50% - 10px); /* Ajusta el ancho según tus necesidades */
+        flex: 0 1 calc(40% - 10px); /* Ajusta el ancho según tus necesidades */
     }
 }
 
 @media (max-width: 576px) {
     .candidates {
-        flex: 0 1 calc(50% - 10px); /* Ajusta el ancho según tus necesidades */
+        flex: 0 1 calc(40% - 10px); /* Ajusta el ancho según tus necesidades */
     }
 }
 
 @media (max-width: 480px) {
     .candidates {
-        flex: 0 1 calc(50% - 10px); /* Ajusta el ancho según tus necesidades */
+        flex: 0 1 calc(40% - 10px); /* Ajusta el ancho según tus necesidades */
     }
 }
 
