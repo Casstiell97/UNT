@@ -221,12 +221,6 @@ button:hover {
     }
 }
 
-@media (max-width: 768px) {
-    .candidates {
-        flex: 0 1 calc(50% - 10px); /* Ajusta el ancho según tus necesidades */
-    }
-}
-
 @media (max-width: 576px) {
     .candidates {
         flex: 0 1 calc(50% - 10px); /* Ajusta el ancho según tus necesidades */
