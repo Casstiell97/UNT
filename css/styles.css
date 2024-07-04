@@ -201,7 +201,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
+    gap: 7px;
     width: 100vw;
     height: 97vh; /* Ocupa el 80% del alto de la pantalla */
     /*overflow: hidden;*/
