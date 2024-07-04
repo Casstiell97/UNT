@@ -201,7 +201,6 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
     width: 100vw;
     height: 97vh; /* Ocupa el 80% del alto de la pantalla */
     /*overflow: hidden;*/
@@ -241,7 +240,7 @@ button:hover {
 
 .candidate-img {
     flex: 0 0 calc(10% - 10px); /* Permitir que las imÃ¡genes se ajusten para llenar cada fila */
-    height: calc((80% / 4) - 6px); /* Ajustar altura para que haya 4 filas */
+    height: calc((80% / 4) - 2px); /* Ajustar altura para que haya 4 filas */
     cursor: pointer;
     transition: transform 0.2s;
     overflow: hidden; /* Ocultar cualquier parte de la imagen que exceda el contenedor */
@@ -254,7 +253,6 @@ button:hover {
 .candidate-img img {
     width: 75%;
     height: auto;
-    object-fit: contain; /* Asegura que la imagen completa sea visible */
 }
 
 .candidate-img:hover {
