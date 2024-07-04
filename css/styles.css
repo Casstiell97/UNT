@@ -208,6 +208,8 @@ button:hover {
     height: 87vh; /* Ocupa el 80% del alto de la pantalla */
     /*overflow: hidden;*/
     box-sizing: border-box;
+    object-fit: cover;
+    object-position: center center;
 }
 
 /* Media Queries para pantallas más pequeñas */
