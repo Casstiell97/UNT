@@ -243,7 +243,7 @@ button:hover {
 
 .candidate-img {
     flex: 0 0 calc(15% - 12px); /* Permitir que las imÃ¡genes se ajusten para llenar cada fila */
-    height: calc((90% / 4) - 0px); /* Ajustar altura para que haya 4 filas */
+    height: calc((75% / 4) - 0px); /* Ajustar altura para que haya 4 filas */
     cursor: pointer;
     transition: transform 0.2s;
     overflow: hidden; /* Ocultar cualquier parte de la imagen que exceda el contenedor */
