@@ -242,8 +242,8 @@ button:hover {
 }
 
 .candidate-img {
-    flex: 0 0 calc(10% - 10px); /* Permitir que las imÃ¡genes se ajusten para llenar cada fila */
-    height: calc((80% / 4) - 0px); /* Ajustar altura para que haya 4 filas */
+    flex: 0 0 calc(15% - 10px); /* Permitir que las imÃ¡genes se ajusten para llenar cada fila */
+    height: calc((90% / 4) - 0px); /* Ajustar altura para que haya 4 filas */
     cursor: pointer;
     transition: transform 0.2s;
     overflow: hidden; /* Ocultar cualquier parte de la imagen que exceda el contenedor */
@@ -254,7 +254,7 @@ button:hover {
 }
 
 .candidate-img img {
-    width: 65%;
+    width: 75%;
     height: auto;
     object-fit: contain; /* Asegura que la imagen completa sea visible */
 }
