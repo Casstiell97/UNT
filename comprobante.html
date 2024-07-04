@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprobante de Votación</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body onclick="window.location.href='final.html'">
+    <div class="container">
+        <div class="ticket">
+            <img src="Candidatos/logocne.png" alt="Logo de la Autoridad Electoral" class="logo-img">
+            <p><strong>Elecciones Presidenciales 2024</strong></p>
+            <h2><strong style="text-align: center;">COMPROBANTE DE VOTACIÓN</strong></h2>
+            <hr>
+            <p><strong>Fecha:</strong> 28/07/2024</p>
+            <p><strong>Lugar de Votación:</strong> Unidad Educativa Venezuela Libre</p>
+            <hr>
+            <p><strong>Elector(a):</strong></p>
+            <p>Nombre: Elector</p>
+            <p>Cédula de Identidad: V-12345678</p>
+            <hr>
+            <p><strong>Mesa Electoral: 00</strong></p>
+            <p id="hora"></p>
+            <hr>
+            <p><strong>Voto por:</strong></p>
+            <p id="voto-candidato"></p>
+            <hr>
+            <p><strong>Nota:</strong> Asegurate de que los datos sean correctos <br>Dobla el comprobante y después introdúcelo en la urna electoral. <br>En caso de cualquier irregularidad, repórtela inmediatamente a las autoridades correspondientes.</p>
+            <hr>
+            <p class="footer-note"><strong>Agradecemos su participación cívica.</strong></p>
+        </div>
+        <button onclick="window.location.href = 'final.html';">Continuar</button>
+    </div>
+
+
+
+    <script src="js/scripts.js"></script>
+
+
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(error) {
+                    console.log('ServiceWorker registration failed: ', error);
+                });
+            });
+        }
+
+
+
+        // Generar la hora actual y agregarla al comprobante
+        document.addEventListener('DOMContentLoaded', () => {
+            const hora = new Date().toLocaleTimeString();
+            document.getElementById('hora').textContent = 'Hora de Votación: ' + hora;
+
+            // Obtener el candidato seleccionado desde localStorage y mostrarlo
+            const selectedCandidate = localStorage.getItem('selectedCandidate');
+            if (selectedCandidate) {
+                document.getElementById('voto-candidato').textContent = selectedCandidate.replace('_', ' ').replace('.png', '');
+            }
+        });
+
+
+    </script>
+</body>
+</html>
