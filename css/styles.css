@@ -1,0 +1,648 @@
+/* Estilos generales */
+ body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #1B54A4;
+    
+}
+.container {
+    text-align: center;
+}
+
+.intro-image {
+    width: 100%;
+    max-width: 500px;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInScale 2s forwards;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.next-button {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    opacity: 0;
+    animation: fadeInButton 2s forwards;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.background {
+    background-color: #1B54A4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#button-container {
+    position: absolute;
+    bottom: 20px; /* Ajusta según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+}
+.floating-window {
+    background-image: url('../img/0.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+    border-radius: 10px;
+    height: 600px;
+    width: 50%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .floating-window {
+        width: 90%;
+    }
+}
+
+#instruction-container img {
+    max-width: 100%;
+    max-height: 300px; /* Ajustar la altura máxima de la imagen */
+    margin-top: 20px;
+    object-fit: contain; /* Mantener la proporción de la imagen */
+}
+#instruction-text {
+
+    color: white;
+
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px; 
+    overflow: hidden;
+}
+
+.banner-text {
+    position: absolute;
+    top: 40vw;
+    left: 55%;
+    font-size: 2vw;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+}
+
+.logo img{
+    width: 80%;
+    height: 200px; /* Ajusta esta altura según tus necesidades */
+    background-image: url('../images/logo.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    #logo-banner {
+        height: 100px; 
+    }
+}
+.container2 {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.page-3 {
+    overflow-y: auto; 
+    max-height: calc(100vh - 160px); 
+    padding: 20px;
+}
+
+/* Ajuste para los botones en la pÃ¡gina 3 */
+.confirmation {
+    margin-top: auto; /* Mueve el contenedor de botones hacia la parte inferior */
+}
+
+.identity-img,
+
+.ballot-img {
+    width: 200px;
+    margin: 10px 0;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.confirmation {
+    margin-top: 20px;
+}
+
+/* Estilo para el logo en la pÃ¡gina del comprobante de votaciÃ³n */
+.logo-img {
+    width: 100vm; /* Ajusta este tamaÃ±o segÃºn tus necesidades */
+    height: autovm;
+    display: block;
+    margin: 0 auto 10px auto; 
+}
+.candidates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9px;
+    width: 100%;
+    height: 97%; /* Ocupa el 80% del alto de la pantalla */
+    /*overflow: hidden;*/
+    box-sizing: border-box;
+}
+
+.candidate-img {
+    flex: 0 0 calc(10% - 10px); /* Permitir que las imÃ¡genes se ajusten para llenar cada fila */
+    height: calc((80% / 4) - 0px); /* Ajustar altura para que haya 4 filas */
+    cursor: pointer;
+    transition: transform 0.2s;
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que exceda el contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.candidate-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Asegura que la imagen completa sea visible */
+}
+
+.candidate-img:hover {
+    transform: scale(1.1);
+}
+
+.selected-candidate-img {
+    width: 220px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .candidates {
+        flex: 0 1 calc(25% - 10px); /* Ajusta el ancho según tus necesidades */
+    }
+}
+
+@media (max-width: 992px) {
+    .candidates {
+        flex: 0 1 calc(33.33% - 10px); /* Ajusta el ancho según tus necesidades */
+    }
+}
+
+@media (max-width: 576px) {
+    .candidates {
+        flex: 0 1 calc(50% - 10px); /* Ajusta el ancho según tus necesidades */
+    }
+}
+
+@media (max-width: 480px) {
+    .candidates {
+        flex: 0 1 calc(50% - 10px); /* Ajusta el ancho según tus necesidades */
+    }
+}
+
+
+.confirmation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Espacio adicional debajo de las imÃ¡genes */
+    padding: 20px 0; /* AÃ±ade padding para separarlo de las imÃ¡genes */
+    font-size: 1em;
+}
+
+
+
+#confirm-vote-btn, #clear-selection-btn {
+    width: 100%;
+    max-width: 150px; /* AsegÃºrate de que coincida con el tamaÃ±o de la imagen */
+    margin-bottom: 0px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#confirm-vote-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    margin-top: 1.5px;
+    margin-bottom: 10px; 
+    max-height: 100px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button#clear-selection-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+/* Estilos para la pantalla emergente (modal) */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijado en la pantalla */
+    z-index: 1000; /* Aparece sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite el scroll si el contenido es grande */
+    background-color: rgb(0, 0, 0); /* Fondo oscuro */
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro con transparencia */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 0% auto;
+    padding: 0.1px;
+    border: none;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+/* Ajuste del tamaÃ±o de la imagen del candidato seleccionado */
+.modal-content .selected-candidate img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Ajusta esta altura segÃºn tus necesidades */
+    object-fit: contain;
+}
+
+
+
+@keyframes animatetop {
+    from { top: -300px; opacity: 0 }
+    to { top: 0; opacity: 1 }
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.selected-candidate {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    width: 100%; /* AsegÃºrate de que el contenedor ocupe el ancho completo */
+}
+
+
+.selected-candidate img {
+    width: 100%;
+    height: auto;
+}
+
+
+.selected-candidate button {
+    width: 10%; /* Ajusta el ancho del botÃ³n aquÃ­ */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 0;  /* Ajusta el padding del botÃ³n aquÃ­ */
+    margin: 0;
+    border-radius: 0;
+    font-size: 15px; /* Ajusta el tamaÃ±o del texto del botÃ³n */
+    display: block;
+    box-sizing: border-box;
+    align-self: center; /* Centra el botÃ³n horizontalmente */
+}
+
+
+.ticket {
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px auto;
+    width: 50%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 14px;
+}
+
+.ticket h1, .ticket h2, .ticket p {
+    margin: 10px 0;
+}
+
+.ticket hr {
+    border: 0;
+    border-top: 1px solid #000;
+    margin: 10px 0;
+}
+
+.ticket ol {
+    padding-left: 20px;
+}
+
+.ticket .logo-img {
+    width: 80px; /* Ajusta este tamaÃ±o segÃºn tus necesidades */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* Centra la imagen y aÃ±ade un margen inferior */
+}
+
+.ticket p {
+    margin: 5px 0;
+}
+
+.ticket strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.ticket .footer-note {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* Estilos para el encabezado y pie de pÃ¡gina */
+.header {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border-bottom: 0px solid #000000;
+    text-align: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center; /* Alinea el contenido al inicio verticalmente */
+    position: center; /* Posiciona la secciÃ³n a la izquierda */
+    left: 20px;
+}
+
+.header-logo {
+    width: 70px; /* Ajusta el tamaÃ±o segÃºn sea necesario */
+    height: center;
+    margin-right: 10px;
+}
+
+.header-right {
+    flex-grow: 1; /* Permite que esta secciÃ³n ocupe el espacio restante */
+}
+
+.header-right h4, .header-right h4 {
+    margin: 2px 0; /* Menos separaciÃ³n entre lÃ­neas */
+}
+
+.footer {
+    display: flex;
+    justify-content: center; /* Alinea el contenido a la izquierda */
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+    font-size: 20px; /* TamaÃ±o de letra No 10 */
+}
+
+.footer-note {
+    text-align: center;
+}
+
+.footer-left {
+    display: flex;
+    align-items: flex-start;
+    position: center; /* Posiciona la secciÃ³n a la izquierda */
+    left: 20px;
+}
+
+.footer-logo {
+    width: 400px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.footer-right {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.footer-right p {
+    margin: 5px 0;
+}
+
+/* Estilos especÃ­ficos para la pÃ¡gina 6 */
+.center-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Estilos especÃ­ficos para el botÃ³n redondo rojo */
+.red-button {
+    background-color: rgb(14, 94, 12);
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.red-button:hover {
+    background-color: rgb(7, 50, 243);
+}
+
+
+.cierre-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1B54A4;
+}
+
+#cierre-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.click-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+button {
+     font-size: 14px;
+     padding: 8px 16px;
+}
+
+.red-button {
+     width: 100px;
+     height: 100px;
+     font-size: 14px;
+}
+
+
+
+.logo-img,
+.ticket .logo-img {
+    width: 50px;
+}
+
+button {
+    font-size: 12px;
+    padding: 6px 12px;
+}
+
+.red-button {
+    width: 80px;
+    height: 80px;
+    font-size: 12px;
+}
+
+.ticket {
+    width: 90%;
+}
+}
+
+/* Estilos para la imagen en la pÃ¡gina 5 */
+.identity-img {
+    width: 50%;  /* Ajusta el tamaÃ±o de la imagen al 70% del contenedor */
+    max-width: 300px;  /* Ajusta el tamaÃ±o mÃ¡ximo de la imagen */
+    height: auto;  /* Mantiene la proporciÃ³n de la imagen */
+    display: block;
+    margin: 20px auto;  /* AÃ±ade margen arriba y abajo de la imagen y centra la imagen */
+}
+
+
+/* Estilos especÃ­ficos para la imagen en la pÃ¡gina 2 */
+/* Estilos especÃ­ficos para la imagen activar en la pÃ¡gina 2 */
+.activation-img {
+    width: 100%; /* Ajusta el tamaÃ±o al 100% del contenedor */
+    max-width: 100px; /* TamaÃ±o mÃ¡ximo de la imagen */
+    height: auto; /* Mantiene la proporciÃ³n de la imagen */
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+}
+
+/* Puedes ajustar los valores de width y max-width segÃºn tus necesidades */
+
+/* CSS para el mensaje de rotaciÃ³n */
+.rotation-message {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.rotation-message img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto 10px;
+}
